@@ -15,13 +15,13 @@ data "aws_caller_identity" "current" {}
 
 data "archive_file" "lambda_zip" {
   type        = "zip"
-  source_dir  = "modules/module-1/resources/lambda/react"
-  output_path = "modules/module-1/resources/lambda/out/reactapp.zip"
+  source_dir  = "resources/lambda/react"
+  output_path = "resources/lambda/out/reactapp.zip"
   depends_on  = [aws_s3_bucket_object.upload_folder_prod]
 }
 
 resource "aws_lambda_function" "react_lambda_app" {
-  filename      = "modules/module-1/resources/lambda/out/reactapp.zip"
+  filename      = "resources/lambda/out/reactapp.zip"
   function_name = "blog-application"
   handler       = "index.handler"
   runtime       = "nodejs14.x"
