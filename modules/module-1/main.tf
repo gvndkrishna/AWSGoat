@@ -8,9 +8,6 @@ terraform {
 }
 provider "aws" {
   region     = "us-east-1"
-  access_key = "AKIAZ23TJ7FAHK7TQUUI"
-  secret_key = "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"
-  # token  = var.token
 }
 
 data "aws_caller_identity" "current" {}
