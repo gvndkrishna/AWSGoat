@@ -7,7 +7,7 @@ terraform {
   }
 }
 provider "aws" {
-  region     = "us-east-1"
+  region = "us-east-1"
 }
 
 data "aws_caller_identity" "current" {}
@@ -858,10 +858,10 @@ resource "aws_api_gateway_integration" "lambda_list_posts_root_options" {
   resource_id = aws_api_gateway_resource.list_posts_root.id
   http_method = aws_api_gateway_method.list_posts_root_options.http_method
 
-  #   integration_http_method = "POST"
+
   type                 = "MOCK"
   passthrough_behavior = "WHEN_NO_MATCH"
-  #   uri                     = aws_lambda_function.lambda_ba_data.invoke_arn
+
   request_templates = {
     "application/json" = jsonencode(
       {
@@ -995,10 +995,10 @@ resource "aws_api_gateway_integration" "lambda_login_root_options" {
   resource_id = aws_api_gateway_resource.login_root.id
   http_method = aws_api_gateway_method.login_root_options.http_method
 
-  #   integration_http_method = "POST"
+
   type                 = "MOCK"
   passthrough_behavior = "WHEN_NO_MATCH"
-  #   uri                     = aws_lambda_function.lambda_ba_data.invoke_arn
+
   request_templates = {
     "application/json" = jsonencode(
       {
@@ -1133,10 +1133,10 @@ resource "aws_api_gateway_integration" "lambda_register_root_options" {
   resource_id = aws_api_gateway_resource.register_root.id
   http_method = aws_api_gateway_method.register_root_options.http_method
 
-  #   integration_http_method = "POST"
+
   type                 = "MOCK"
   passthrough_behavior = "WHEN_NO_MATCH"
-  #   uri                     = aws_lambda_function.lambda_ba_data.invoke_arn
+
   request_templates = {
     "application/json" = jsonencode(
       {
@@ -1266,10 +1266,10 @@ resource "aws_api_gateway_integration" "lambda_save_post_root_options" {
   resource_id = aws_api_gateway_resource.save_post_root.id
   http_method = aws_api_gateway_method.save_post_root_options.http_method
 
-  #   integration_http_method = "POST"
+
   type                 = "MOCK"
   passthrough_behavior = "WHEN_NO_MATCH"
-  #   uri                     = aws_lambda_function.lambda_ba_data.invoke_arn
+
   request_templates = {
     "application/json" = jsonencode(
       {
@@ -1405,10 +1405,10 @@ resource "aws_api_gateway_integration" "lambda_verify_root_options" {
   resource_id = aws_api_gateway_resource.verify_root.id
   http_method = aws_api_gateway_method.verify_root_options.http_method
 
-  #   integration_http_method = "POST"
+
   type                 = "MOCK"
   passthrough_behavior = "WHEN_NO_MATCH"
-  #   uri                     = aws_lambda_function.lambda_ba_data.invoke_arn
+
   request_templates = {
     "application/json" = jsonencode(
       {
@@ -1696,10 +1696,10 @@ resource "aws_api_gateway_integration" "search_author_root_options" {
   resource_id = aws_api_gateway_resource.search_author_root.id
   http_method = aws_api_gateway_method.search_author_options.http_method
 
-  #   integration_http_method = "POST"
+
   type                 = "MOCK"
   passthrough_behavior = "WHEN_NO_MATCH"
-  #   uri                     = aws_lambda_function.lambda_ba_data.invoke_arn
+
   request_templates = {
     "application/json" = jsonencode(
       {
@@ -1862,10 +1862,10 @@ resource "aws_api_gateway_integration" "lambda_reset_password_root_options" {
   resource_id = aws_api_gateway_resource.reset_password_root.id
   http_method = aws_api_gateway_method.reset_password_root_options.http_method
 
-  #   integration_http_method = "POST"
+
   type                 = "MOCK"
   passthrough_behavior = "WHEN_NO_MATCH"
-  #   uri                     = aws_lambda_function.lambda_ba_data.invoke_arn
+
   request_templates = {
     "application/json" = jsonencode(
       {
@@ -1994,10 +1994,10 @@ resource "aws_api_gateway_integration" "lambda_get_users_root_options" {
   resource_id = aws_api_gateway_resource.get_users_root.id
   http_method = aws_api_gateway_method.get_users_root_options.http_method
 
-  #   integration_http_method = "POST"
+
   type                 = "MOCK"
   passthrough_behavior = "WHEN_NO_MATCH"
-  #   uri                     = aws_lambda_function.lambda_ba_data.invoke_arn
+
   request_templates = {
     "application/json" = jsonencode(
       {
@@ -2125,10 +2125,10 @@ resource "aws_api_gateway_integration" "lambda_unban_user_root_options" {
   resource_id = aws_api_gateway_resource.unban_user_root.id
   http_method = aws_api_gateway_method.unban_user_root_options.http_method
 
-  #   integration_http_method = "POST"
+
   type                 = "MOCK"
   passthrough_behavior = "WHEN_NO_MATCH"
-  #   uri                     = aws_lambda_function.lambda_ba_data.invoke_arn
+
   request_templates = {
     "application/json" = jsonencode(
       {
@@ -2260,10 +2260,8 @@ resource "aws_api_gateway_integration" "lambda_user_details_modal_root_options" 
   resource_id = aws_api_gateway_resource.user_details_modal_root.id
   http_method = aws_api_gateway_method.user_details_modal_root_options.http_method
 
-  #   integration_http_method = "POST"
   type                 = "MOCK"
   passthrough_behavior = "WHEN_NO_MATCH"
-  #   uri                     = aws_lambda_function.lambda_ba_data.invoke_arn
   request_templates = {
     "application/json" = jsonencode(
       {
@@ -2394,10 +2392,8 @@ resource "aws_api_gateway_integration" "lambda_delete_user_root_options" {
   resource_id = aws_api_gateway_resource.delete_user_root.id
   http_method = aws_api_gateway_method.delete_user_root_options.http_method
 
-  #   integration_http_method = "POST"
   type                 = "MOCK"
   passthrough_behavior = "WHEN_NO_MATCH"
-  #   uri                     = aws_lambda_function.lambda_ba_data.invoke_arn
   request_templates = {
     "application/json" = jsonencode(
       {
@@ -2528,10 +2524,8 @@ resource "aws_api_gateway_integration" "lambda_change_auth_root_options" {
   resource_id = aws_api_gateway_resource.change_auth_root.id
   http_method = aws_api_gateway_method.change_auth_root_options.http_method
 
-  #   integration_http_method = "POST"
   type                 = "MOCK"
   passthrough_behavior = "WHEN_NO_MATCH"
-  #   uri                     = aws_lambda_function.lambda_ba_data.invoke_arn
   request_templates = {
     "application/json" = jsonencode(
       {
@@ -2662,10 +2656,9 @@ resource "aws_api_gateway_integration" "lambda_modify_post_status_root_options" 
   resource_id = aws_api_gateway_resource.modify_post_status_root.id
   http_method = aws_api_gateway_method.modify_post_status_root_options.http_method
 
-  #   integration_http_method = "POST"
+
   type                 = "MOCK"
   passthrough_behavior = "WHEN_NO_MATCH"
-  #   uri                     = aws_lambda_function.lambda_ba_data.invoke_arn
   request_templates = {
     "application/json" = jsonencode(
       {
@@ -2794,10 +2787,9 @@ resource "aws_api_gateway_integration" "lambda_get_dashboard_root_options" {
   resource_id = aws_api_gateway_resource.get_dashboard_root.id
   http_method = aws_api_gateway_method.get_dashboard_root_options.http_method
 
-  #   integration_http_method = "POST"
+
   type                 = "MOCK"
   passthrough_behavior = "WHEN_NO_MATCH"
-  #   uri                     = aws_lambda_function.lambda_ba_data.invoke_arn
   request_templates = {
     "application/json" = jsonencode(
       {
@@ -2927,10 +2919,10 @@ resource "aws_api_gateway_integration" "lambda_change_profile_root_options" {
   resource_id = aws_api_gateway_resource.change_profile_root.id
   http_method = aws_api_gateway_method.change_profile_root_options.http_method
 
-  #   integration_http_method = "POST"
+
   type                 = "MOCK"
   passthrough_behavior = "WHEN_NO_MATCH"
-  #   uri                     = aws_lambda_function.lambda_ba_data.invoke_arn
+
   request_templates = {
     "application/json" = jsonencode(
       {
@@ -3103,21 +3095,21 @@ resource "aws_api_gateway_deployment" "apideploy_ba" {
 
 data "archive_file" "lambda_zip_bap" {
   type        = "zip"
-  source_file = "modules/module-1/resources/lambda/data/lambda_function.py"
-  output_path = "modules/module-1/resources/lambda/out/data_app.zip"
+  source_file = "resources/lambda/data/lambda_function.py"
+  output_path = "resources/lambda/out/data_app.zip"
   depends_on = [
     null_resource.file_replacement_lambda_data
   ]
 }
 resource "aws_lambda_layer_version" "lambda_layer" {
-  filename                 = "modules/module-1/resources/lambda/layer/bcrypt-pyjwt.zip"
+  filename                 = "resources/lambda/layer/bcrypt-pyjwt.zip"
   layer_name               = "bcrypt-pyjwt"
   compatible_architectures = ["x86_64"]
   compatible_runtimes      = ["python3.9"]
 }
 
 resource "aws_lambda_function" "lambda_ba_data" {
-  filename      = "modules/module-1/resources/lambda/out/data_app.zip"
+  filename      = "resources/lambda/out/data_app.zip"
   function_name = "blog-application-data"
   handler       = "lambda_function.lambda_handler"
   runtime       = "python3.9"
@@ -3164,38 +3156,36 @@ resource "aws_iam_role_policy_attachment" "blog_app_policy" {
 resource "aws_iam_policy" "lambda_data_policies" {
   name = "lambda-data-policies"
   policy = jsonencode({
-    "Statement": [
-        {
-            "Action": [
-                "s3:*",
-                "s3-object-lambda:*",
-                "autoscaling:Describe*",
-                "cloudwatch:*",
-                "logs:*",
-                "sns:*",
-                "dynamodb:*",
-                "dax:*",
-                "lambda:*"
-            ],
-            "Effect": "Allow",
-            "Resource": "*",
-            "Sid": "Pol1"
-        },
-        {
-            "Effect": "Allow",
-            "Action": [
-                "execute-api:Invoke",
-                "execute-api:ManageConnections"
-            ],
-            "Resource": "arn:aws:execute-api:*:*:*"
-        }
+    "Statement" : [
+      {
+        "Action" : [
+          "s3:*",
+          "s3-object-lambda:*",
+          "autoscaling:Describe*",
+          "cloudwatch:*",
+          "logs:*",
+          "sns:*",
+          "dynamodb:*",
+          "dax:*",
+          "lambda:*"
+        ],
+        "Effect" : "Allow",
+        "Resource" : "*",
+        "Sid" : "Pol1"
+      },
+      {
+        "Effect" : "Allow",
+        "Action" : [
+          "execute-api:Invoke",
+          "execute-api:ManageConnections"
+        ],
+        "Resource" : "arn:aws:execute-api:*:*:*"
+      }
     ],
-    "Version": "2012-10-17"
-})
+    "Version" : "2012-10-17"
+  })
 }
 
-
-/* Adding API GW to Lambda search-app app */
 
 resource "aws_lambda_permission" "apigw_ba_python" {
   statement_id  = "AllowAPIGatewayInvoke"
@@ -3204,8 +3194,6 @@ resource "aws_lambda_permission" "apigw_ba_python" {
   principal     = "apigateway.amazonaws.com"
   source_arn    = "${aws_api_gateway_rest_api.apiLambda_ba.execution_arn}/*/*"
 }
-
-# /* Finished lambda_ba_data API Gateway integration */
 
 
 
@@ -3266,6 +3254,7 @@ resource "aws_s3_bucket_acl" "bucket_upload" {
   bucket = aws_s3_bucket.bucket_upload.id
   acl    = "private"
 }
+
 resource "aws_s3_bucket_policy" "allow_access_for_prod" {
   bucket = aws_s3_bucket.bucket_upload.id
   policy = data.aws_iam_policy_document.allow_get_access.json
@@ -3301,11 +3290,11 @@ resource "aws_s3_bucket_cors_configuration" "bucket_upload" {
 }
 # Upload in production bucket
 resource "aws_s3_bucket_object" "upload_folder_prod" {
-  for_each     = fileset("./modules/module-1/resources/s3/webfiles/", "**")
+  for_each     = fileset("./resources/s3/webfiles/", "**")
   bucket       = aws_s3_bucket.bucket_upload.bucket
   key          = each.value
   acl          = "public-read"
-  source       = "./modules/module-1/resources/s3/webfiles/${each.value}"
+  source       = "./resources/s3/webfiles/${each.value}"
   content_type = lookup(local.content_type_map, regex("\\.(?P<extension>[A-Za-z0-9]+)$", each.value).extension, "application/octet-stream")
   depends_on   = [aws_s3_bucket.bucket_upload, null_resource.file_replacement_api_gw]
 }
@@ -3314,13 +3303,15 @@ resource "aws_s3_bucket_object" "upload_folder_prod" {
 
 #Development bucket
 resource "aws_s3_bucket" "dev" {
-  bucket        = "dev-blog-awsgoat-bucket-${data.aws_caller_identity.current.account_id}"
+  bucket = "dev-blog-awsgoat-bucket-${data.aws_caller_identity.current.account_id}"
 
   tags = {
     Name        = "Development bucket"
     Environment = "Dev"
   }
 }
+
+
 # ACL fixes required for AWS S3 APR 2023 updates.
 resource "aws_s3_bucket_public_access_block" "dev" {
   bucket = aws_s3_bucket.dev.id
@@ -3367,20 +3358,20 @@ data "aws_iam_policy_document" "allow_get_list_access" {
 }
 # Upload in dev bucket
 resource "aws_s3_bucket_object" "upload_folder_dev" {
-  for_each     = fileset("./modules/module-1/resources/s3/webfiles/build/", "**")
+  for_each     = fileset("./resources/s3/webfiles/build/", "**")
   bucket       = aws_s3_bucket.dev.bucket
   key          = each.value
   acl          = "public-read"
-  source       = "./modules/module-1/resources/s3/webfiles/build/${each.value}"
+  source       = "./resources/s3/webfiles/build/${each.value}"
   content_type = lookup(local.content_type_map, regex("\\.(?P<extension>[A-Za-z0-9]+)$", each.value).extension, "application/octet-stream")
   depends_on   = [aws_s3_bucket.dev, null_resource.file_replacement_ec2_ip]
 }
 resource "aws_s3_bucket_object" "upload_folder_dev_2" {
-  for_each     = fileset("./modules/module-1/resources/s3/shared/", "**")
+  for_each     = fileset("./resources/s3/shared/", "**")
   bucket       = aws_s3_bucket.dev.bucket
   key          = each.value
   acl          = "public-read"
-  source       = "./modules/module-1/resources/s3/shared/${each.value}"
+  source       = "./resources/s3/shared/${each.value}"
   content_type = lookup(local.content_type_map, regex("\\.(?P<extension>[A-Za-z0-9]+)$", each.value).extension, "application/octet-stream")
   depends_on   = [aws_s3_bucket.dev, null_resource.file_replacement_ec2_ip]
 }
@@ -3391,6 +3382,7 @@ resource "aws_s3_bucket_object" "upload_folder_dev_2" {
 resource "aws_s3_bucket" "bucket_temp" {
   bucket        = "ec2-temp-bucket-${data.aws_caller_identity.current.account_id}"
   force_destroy = true
+
   tags = {
     Name        = "Temporary bucket"
     Environment = "Dev"
@@ -3423,22 +3415,23 @@ resource "aws_s3_bucket_acl" "bucket_temp" {
   bucket = aws_s3_bucket.bucket_temp.id
   acl    = "public-read"
 }
-/* Uploading all files to files-ACCOUNT_ID bucket */
+
+/* Uploading all files to ec2-temp-bucket-ACCOUNT_ID bucket */
 resource "aws_s3_bucket_object" "upload_temp_object" {
-  for_each     = fileset("./modules/module-1/resources/s3/webfiles/build/", "**")
+  for_each     = fileset("./resources/s3/webfiles/build/", "**")
   acl          = "public-read"
   bucket       = aws_s3_bucket.bucket_temp.bucket
   key          = each.value
-  source       = "./modules/module-1/resources/s3/webfiles/build/${each.value}"
+  source       = "./resources/s3/webfiles/build/${each.value}"
   content_type = lookup(local.content_type_map, regex("\\.(?P<extension>[A-Za-z0-9]+)$", each.value).extension, "application/octet-stream")
   depends_on   = [aws_s3_bucket.bucket_upload, null_resource.file_replacement_lambda_react]
 }
 resource "aws_s3_bucket_object" "upload_temp_object_2" {
-  for_each     = fileset("./modules/module-1/resources/s3/shared/", "**")
+  for_each     = fileset("./resources/s3/shared/", "**")
   acl          = "public-read"
   bucket       = aws_s3_bucket.bucket_temp.bucket
   key          = each.value
-  source       = "./modules/module-1/resources/s3/shared/${each.value}"
+  source       = "./resources/s3/shared/${each.value}"
   content_type = lookup(local.content_type_map, regex("\\.(?P<extension>[A-Za-z0-9]+)$", each.value).extension, "application/octet-stream")
   depends_on   = [aws_s3_bucket.bucket_upload, null_resource.file_replacement_lambda_react]
 }
@@ -3470,15 +3463,10 @@ resource "aws_internet_gateway" "goat_gw" {
     Name = "app gateway"
   }
 }
-
-data "aws_availability_zones" "available" {
-  state = "available"
-}
-
 resource "aws_subnet" "goat_subnet" {
   vpc_id                  = aws_vpc.goat_vpc.id
   cidr_block              = "192.168.0.0/24"
-  availability_zone       = data.aws_availability_zones.available.names[0]
+  availability_zone       = "us-east-1a"
   map_public_ip_on_launch = true
   tags = {
     Name = "AWS_GOAT App subnet"
@@ -3558,57 +3546,57 @@ resource "aws_iam_role_policy_attachment" "goat_policy" {
 resource "aws_iam_policy" "goat_inline_policy_2" {
   name = "dev-ec2-lambda-policies"
   policy = jsonencode({
-    "Statement": [
-        {
-            "Action": [
-                "lambda:UpdateFunctionCode",
-                "lambda:UpdateFunctionEventInvokeConfig",
-                "lambda:AddPermission",
-                "lambda:InvokeFunction",
-                "lambda:GetLayerVersion",
-                "lambda:ListVersionsByFunction",
-                "lambda:UpdateFunctionConfiguration",
-                "lambda:GetFunctionConfiguration",
-                "lambda:GetLayerVersionPolicy",
-                "lambda:GetPolicy",
-                "iam:AttachRolePolicy"
-            ],
-            "Effect": "Allow",
-            "Resource": ["${aws_lambda_function.lambda_ba_data.arn}", "${aws_iam_role.blog_app_lambda.arn}"],
-            "Sid": "Pol0"
-        },
-        {
-            "Action": [
-                "iam:ListPolicies",
-                "iam:GetRole",
-                "iam:GetPolicyVersion",
-                "lambda:ListFunctions",
-                "iam:GetInstanceProfile",
-                "iam:GetPolicy",
-                "iam:ListRoles",
-                "iam:ListInstanceProfileTags",
-                "iam:ListInstanceProfiles",
-                "iam:CreatePolicy",
-                "iam:ListInstanceProfilesForRole",
-                "iam:PassRole",
-                "iam:ListPolicyVersions",
-                "iam:ListAttachedRolePolicies",
-                "lambda:ListLayerVersions",
-                "iam:UpdateRole",
-                "iam:ListRolePolicies",
-                "iam:GetRolePolicy"
-            ],
-            "Effect": "Allow",
-            "Resource": "*",
-            "Sid": "Pol1"
-        }
+    "Statement" : [
+      {
+        "Action" : [
+          "lambda:UpdateFunctionCode",
+          "lambda:UpdateFunctionEventInvokeConfig",
+          "lambda:AddPermission",
+          "lambda:InvokeFunction",
+          "lambda:GetLayerVersion",
+          "lambda:ListVersionsByFunction",
+          "lambda:UpdateFunctionConfiguration",
+          "lambda:GetFunctionConfiguration",
+          "lambda:GetLayerVersionPolicy",
+          "lambda:GetPolicy",
+          "iam:AttachRolePolicy"
+        ],
+        "Effect" : "Allow",
+        "Resource" : ["${aws_lambda_function.lambda_ba_data.arn}", "${aws_iam_role.blog_app_lambda_python.arn}"],
+        "Sid" : "Pol0"
+      },
+      {
+        "Action" : [
+          "iam:ListPolicies",
+          "iam:GetRole",
+          "iam:GetPolicyVersion",
+          "lambda:ListFunctions",
+          "iam:GetInstanceProfile",
+          "iam:GetPolicy",
+          "iam:ListRoles",
+          "iam:ListInstanceProfileTags",
+          "iam:ListInstanceProfiles",
+          "iam:CreatePolicy",
+          "iam:ListInstanceProfilesForRole",
+          "iam:PassRole",
+          "iam:ListPolicyVersions",
+          "iam:ListAttachedRolePolicies",
+          "lambda:ListLayerVersions",
+          "iam:UpdateRole",
+          "iam:ListRolePolicies",
+          "iam:GetRolePolicy"
+        ],
+        "Effect" : "Allow",
+        "Resource" : "*",
+        "Sid" : "Pol1"
+      }
     ],
-    "Version": "2012-10-17"
-})
+    "Version" : "2012-10-17"
+  })
 }
 
 data "template_file" "goat_script" {
-  template = file("modules/module-1/resources/ec2/goat_user_data.tpl")
+  template = file("resources/ec2/goat_user_data.tpl")
   vars = {
     S3_BUCKET_NAME = aws_s3_bucket.bucket_temp.bucket
   }
@@ -3671,12 +3659,11 @@ resource "aws_dynamodb_table" "posts_table" {
 }
 
 
-
 resource "null_resource" "populate_table" {
   provisioner "local-exec" {
     command     = <<EOF
-sed -i 's/replace-bucket-name/${aws_s3_bucket.bucket_upload.bucket}/g' modules/module-1/resources/dynamodb/blog-posts.json
-python3 modules/module-1/resources/dynamodb/populate-table.py
+sed -i 's/replace-bucket-name/${aws_s3_bucket.bucket_upload.bucket}/g' resources/dynamodb/blog-posts.json
+python3 resources/dynamodb/populate-table.py
 EOF
     interpreter = ["/bin/bash", "-c"]
   }
@@ -3684,12 +3671,10 @@ EOF
 }
 
 
-# command = "aws s3 cp s3://${aws_s3_bucket.bucket_upload.bucket} s3://${aws_s3_bucket.dev.bucket} --recursive"
-
 # To replace with IP Address of EC2-Instance in .ssh/config
 resource "null_resource" "file_replacement_ec2_ip" {
   provisioner "local-exec" {
-    command     = "sed -i 's/EC2_IP_ADDR/${aws_instance.goat_instance.public_ip}/g' modules/module-1/resources/s3/shared/shared/files/.ssh/config.txt"
+    command     = "sed -i 's/EC2_IP_ADDR/${aws_instance.goat_instance.public_ip}/g' resources/s3/shared/shared/files/.ssh/config.txt"
     interpreter = ["/bin/bash", "-c"]
   }
   depends_on = [aws_instance.goat_instance]
@@ -3698,7 +3683,7 @@ resource "null_resource" "file_replacement_ec2_ip" {
 
 resource "null_resource" "file_replacement_lambda_react" {
   provisioner "local-exec" {
-    command = "sed -i 's/replace-bucket-name/${aws_s3_bucket.bucket_upload.bucket}/g' modules/module-1/resources/lambda/react/index.js"
+    command     = "sed -i 's/replace-bucket-name/${aws_s3_bucket.bucket_upload.bucket}/g' resources/lambda/react/index.js"
     interpreter = ["/bin/bash", "-c"]
   }
   depends_on = [
@@ -3708,7 +3693,7 @@ resource "null_resource" "file_replacement_lambda_react" {
 
 resource "null_resource" "file_replacement_lambda_data" {
   provisioner "local-exec" {
-    command = "sed -i 's/replace-bucket-name/${aws_s3_bucket.bucket_upload.bucket}/g' modules/module-1/resources/lambda/data/lambda_function.py"
+    command     = "sed -i 's/replace-bucket-name/${aws_s3_bucket.bucket_upload.bucket}/g' resources/lambda/data/lambda_function.py"
     interpreter = ["/bin/bash", "-c"]
   }
   depends_on = [
@@ -3717,14 +3702,13 @@ resource "null_resource" "file_replacement_lambda_data" {
 }
 
 
-
 resource "null_resource" "file_replacement_api_gw" {
   provisioner "local-exec" {
     command     = <<EOF
-sed -i "s,API_GATEWAY_URL,${aws_api_gateway_deployment.apideploy_ba.invoke_url},g" modules/module-1/resources/s3/webfiles/build/static/js/main.e5839717.js
-sed -i "s,API_GATEWAY_URL,${aws_api_gateway_deployment.apideploy_ba.invoke_url},g" modules/module-1/resources/s3/webfiles/build/static/js/main.e5839717.js.map
-sed -i 's/"\/static/"https:\/\/${aws_s3_bucket.bucket_upload.bucket}\.s3\.amazonaws\.com\/build\/static/g' modules/module-1/resources/s3/webfiles/build/static/js/main.e5839717.js
-sed -i 's/n.p+"static/"https:\/\/${aws_s3_bucket.bucket_upload.bucket}\.s3\.amazonaws\.com\/build\/static/g' modules/module-1/resources/s3/webfiles/build/static/js/main.e5839717.js
+sed -i "s,API_GATEWAY_URL,${aws_api_gateway_deployment.apideploy_ba.invoke_url},g" resources/s3/webfiles/build/static/js/main.e5839717.js
+sed -i "s,API_GATEWAY_URL,${aws_api_gateway_deployment.apideploy_ba.invoke_url},g" resources/s3/webfiles/build/static/js/main.e5839717.js.map
+sed -i 's/"\/static/"https:\/\/${aws_s3_bucket.bucket_upload.bucket}\.s3\.amazonaws\.com\/build\/static/g' resources/s3/webfiles/build/static/js/main.e5839717.js
+sed -i 's/n.p+"static/"https:\/\/${aws_s3_bucket.bucket_upload.bucket}\.s3\.amazonaws\.com\/build\/static/g' resources/s3/webfiles/build/static/js/main.e5839717.js
 EOF
     interpreter = ["/bin/bash", "-c"]
   }
@@ -3733,8 +3717,23 @@ EOF
   ]
 }
 
+/* Replace deployed api gateway url with API_GATEWAY_URL for local terraform reapply */
+resource "null_resource" "file_replacement_api_gw_cleanup" {
+  provisioner "local-exec" {
+    command     = <<EOF
+sed -i "s,${aws_api_gateway_deployment.apideploy_ba.invoke_url},API_GATEWAY_URL,g" resources/s3/webfiles/build/static/js/main.e5839717.js
+sed -i "s,${aws_api_gateway_deployment.apideploy_ba.invoke_url},API_GATEWAY_URL,g" resources/s3/webfiles/build/static/js/main.e5839717.js.map
+sed -i 's/${aws_instance.goat_instance.public_ip}/EC2_IP_ADDR/g' resources/s3/shared/shared/files/.ssh/config.txt
+EOF
+    interpreter = ["/bin/bash", "-c"]
+  }
+  depends_on = [
+    aws_s3_bucket_object.upload_temp_object, aws_s3_bucket_object.upload_temp_object_2, aws_s3_bucket_object.upload_folder_dev, aws_s3_bucket_object.upload_folder_dev_2, aws_s3_bucket_object.upload_folder_prod
+  ]
+}
 
-output "ad_target_url" {
+
+output "app_url" {
   value = "${aws_api_gateway_stage.api.invoke_url}/react"
 }
 
